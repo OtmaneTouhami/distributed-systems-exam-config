@@ -21,3 +21,15 @@ spring:
                 allowedHeaders:
                   - "*"
                 allowCredentials: true
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: keynote-service
+        url: /keynote-service/v3/api-docs
+      - name: conference-service
+        url: /conference-service/v3/api-docs
+      - name: analytics-service
+        url: /analytics-service/v3/api-docs
+  api-docs:
+    enabled: true
