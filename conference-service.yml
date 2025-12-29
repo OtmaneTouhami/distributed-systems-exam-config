@@ -15,6 +15,14 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
   kafka:
     bootstrap-servers: localhost:9093
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      retries: 3
+    admin:
+      properties:
+        bootstrap.servers: localhost:9093
+      auto-create: true
 
 axon:
   axonserver:
