@@ -1,0 +1,9 @@
+# Spring Cloud Gateway Configuration
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              lower-case-service-id: true
